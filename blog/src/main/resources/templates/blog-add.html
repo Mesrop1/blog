@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mesrop`s blog</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<header th:insert="blocks/header :: header"></header>
+
+<div class="container mt-5">
+    <h1>Adding new Notes</h1>
+    <form action="/blog/add" method="post">
+        <input type="text" name="title" placeholder="Please Insert Notes" class="form-control"/><br>
+        <input type="anons" name="anons" placeholder="Please insert anons of  Notes" class="form-control"/><br>
+        <textarea name="full_text" placeholder="Please Insert title" class="form-control"></textarea><br>
+        <button type="submit" class="btn btn-success">ADD NOTE</button><br>
+    </form>
+</div>
+
+</body>
+</html>

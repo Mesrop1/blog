@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Edit Notes</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<header th:insert="blocks/header :: header"></header>
+
+<div class="container mt-5">
+    <h1>Edit Notes</h1>
+    <div th:each="el : ${post}">
+        <form method="post">
+            <input type="text" th:value="${el.title}" name="title" placeholder="Please Insert Notes" class="form-control"/><br>
+            <input type="anons" th:value="${el.anons}" name="anons" placeholder="Please insert anons of  Notes" class="form-control"/><br>
+            <textarea  name="full_text" placeholder="Please Insert title" class="form-control" th:text="${el.full_text}"/><br>
+            <button type="submit" class="btn btn-success">Edit</button><br>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
